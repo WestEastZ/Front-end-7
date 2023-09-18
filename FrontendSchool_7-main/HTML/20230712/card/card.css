@@ -1,0 +1,279 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
+    format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+/* h2,
+div,
+p {
+  margin: 0;
+  font-size: 12px;
+  color: #5a6a72;
+  font-family: Pretendard-Regular;
+}
+
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+.card {
+  margin: 50px;
+  width: 288px;
+  height: 374px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  padding-top: 16px;
+}
+
+.user {
+  display: flex;
+  gap: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 12px;
+}
+
+.title-main {
+  font-size: 16px;
+  font-weight: bold;
+  color: #29363d;
+}
+.user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.text {
+  width: 256px;
+  height: 40px;
+
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  font-size: 12px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-height: 20px;
+}
+
+.read-box {
+  display: flex;
+  align-items: center;
+  width: 256px;
+  height: 32px;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.read-box a {
+  font-weight: bold;
+  color: #29363d;
+  font-size: 14px;
+  text-decoration: underline;
+  margin-right: 20px;
+} */
+
+/* reset */
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font: inherit;
+}
+
+button:enabled {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 실습 */
+
+body {
+  font-family: "Pretendard-Regular", sans-serif;
+}
+.card {
+  position: relative;
+  width: 288px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+.card header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 16px 12px 16px;
+}
+
+.profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.fwb {
+  font-family: "Pretendard-Bold";
+  color: #29363d;
+}
+
+.small-font {
+  font-size: 12px;
+  color: #5a6a72;
+}
+
+/* 말줄임 - 한줄 */
+.ell1 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.c-h-text {
+  overflow: hidden;
+}
+
+.thumbnail {
+  width: 100%;
+  /* 이미지 비율 설정 */
+  aspect-ratio: 288/196;
+  object-fit: cover;
+}
+.c-content {
+  padding: 10px 16px 20px 16px;
+}
+
+.ell2 {
+  overflow: hidden;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  /* calc함수 사용  (font-size * line-clamp * 줄간격) */
+  height: calc(1em * 2 * 1.6);
+}
+
+.c-content .ell2 {
+  margin-bottom: 16px;
+}
+
+.read {
+  width: 60px;
+  font-size: 14px;
+  padding: 3px 6px;
+  text-decoration: underline;
+  position: relative;
+}
+
+.read::after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  border: 2px solid #29363d;
+  border-width: 2px 2px 0 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-10px, -50%) rotate(45deg);
+  transition: all 0.3s;
+}
+.read:hover::after {
+  transform: translate(0, -50%) rotate(405deg) scale(2);
+}
+
+.card {
+  position: relative;
+}
+.btn-group {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+
+  display: flex;
+  gap: 8px;
+}
+
+.btn-group button {
+  border: 0;
+  background: none;
+  transition: all 0.3s;
+}
+
+.btn-group button img {
+  width: 32px;
+  vertical-align: top;
+}
+
+.btn-group button:hover {
+  transform: rotate(360deg) scale(1.5);
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 24px;
+}
+
+.notice {
+  margin: 0 auto;
+  width: 1224px;
+
+  /* 좌우 여백 각 30px씩 주기 위하여 */
+  max-width: calc(100% - 60px);
+}
+
+.notice h2 {
+  font-size: 30px;
+  margin-bottom: 32px;
+}

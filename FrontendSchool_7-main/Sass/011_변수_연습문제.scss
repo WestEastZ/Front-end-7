@@ -1,0 +1,16 @@
+// 연습문제 1번 maps을 사용하여 아래와 같이 출력되도록 하세요.
+// maps에 저장되어 있는 key는 'back', 'icon'이 있습니다.
+// path라는 변수도 사용하셔야 합니다.
+nav {
+  background-image: url("assets/img/background.png");
+}
+
+.home {
+  background: url("assets/img/icon_font_awesome_home.png");
+}
+
+// 연습문제 2번 lists를 사용해서 아래와 같이 출력되도록 하세요.
+// lists에 저장되어 있는 값은 'left', 'right', 'bottom'...
+.title {
+  border-bottom: 1px solid black;
+}

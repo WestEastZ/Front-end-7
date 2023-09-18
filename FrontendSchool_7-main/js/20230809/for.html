@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      var i;
+      for (i = 0; i < cars.length; i++) {
+        text += cars[i] + "<br>";
+      }
+
+      //반복문
+      for (var i = 0; i < 10; i++) {
+        document.write(i, "<br>");
+      }
+
+      //1부터 100까지의 짝수의 합
+      let s = 0;
+      for (var i = 0; i < 101; i += 2) {
+        document.write(i, "<br>");
+        s += i;
+      }
+      document.write(s, "<br>");
+
+      //구구단
+      for (var i = 2; i < 10; i++) {
+        for (var j = 1; j < 10; j++) {
+          document.write(`${i} X ${j} = ${i * j} <br>`);
+        }
+      }
+
+      //100보다 작은 3의 배수와 5의 배수의 합
+      s = 0;
+      for (var i = 0; i < 101; i++) {
+        if (i % 3 == 0 || i % 5 == 0) {
+          document.write(i, "<br>");
+          s += i;
+        }
+      }
+      document.write(s, "<br>");
+
+      //평균 구하기
+      var value1 = [100, 200, 50, 400, 900];
+      var value2 = [60, 40, 80, 30, 90];
+      function average(value) {
+        var sum = 0;
+        for (var i = 0; i < value.length; i++) {
+          sum += value[i];
+        }
+        return sum / value.length;
+      }
+
+      document.write("평균1 : ", average(value1)); //330
+      document.write("<br>");
+      document.write("평균2 : ", average(value2)); //60
+
+      //최댓값 구하기
+      var value = [100, 200, 50, 400, 900];
+      function maximum(value) {
+        var max = 0;
+        for (var i = 0; i < value.length; i++) {
+          if (max < value[i]) {
+            max = value[i];
+          }
+        }
+        return max;
+      }
+      document.write(maximum(value)); //900
+      document.write("<br>");
+
+      //Math.max.apply() 사용해서 최댓값 구하기
+      var max2 = Math.max.apply(null, value);
+      document.write(max2); //900
+
+      // 다음 입사문제 정답코드 (https://codingdojang.com/scode/408?answer_mode=hide)
+      let value = [1, 3, 4, 8, 13, 17, 20];
+      let temp = value[1] - value[0]; // 4 - 1 -> 3, 초기 temp는 3
+      let result = 0;
+
+      for (let i = 0; i < value.length - 1; i++) {
+        if (temp > value[i + 1] - value[i]) {
+          temp = value[i + 1] - value[i];
+          result = i;
+        }
+      }
+
+      console.log(value[result], value[result + 1]);
+      ////////////////////////
+
+      // 1번째 순회
+      // initail value : i==0, temp==3, result==0
+      for (let i = 0; i < 8; i++) {
+        if (3 > 3) {
+          // temp > (value[1] - value[0])
+          temp = value[i + 1] - value[i]; // temp = value[i+1] - value[i];
+          result = i; // result = i;
+        }
+      }
+      // final value : i==0, temp==3, result==0
+
+      // 2번째 순회
+      // initail value : i==1, temp==3, result==0
+      for (let i = 0; i < 8; i++) {
+        if (3 > 2) {
+          // temp > (value[2] - value[1])
+          temp = 2; // temp = value[2] - value[1];
+          result = 1; // result = 1;
+        }
+      }
+      // final value : i==1, temp==2, result==1
+
+      // 3번째 순회
+      // initail value : i==2, temp==2, result==1
+      for (let i = 0; i < 8; i++) {
+        if (2 > 2) {
+          // temp > (value[2] - value[1])
+          temp = value[i + 1] - value[i];
+          result = i;
+        }
+      }
+      // final value : i==1, temp==2, result==1
+
+      let array = [10, 20, 30, 40, 50];
+      let i = 0;
+
+      for (; i < array.length; ) {
+        document.write(array[i], "<br>");
+        i++;
+      }
+
+      array.forEach((e) => console.log(e * 3));
+
+      for (var variable in array) {
+        document.write(array[variable], "<br>");
+      }
+
+      for (var variable of array) {
+        document.write(variable, "!! <br>");
+      }
+    </script>
+  </body>
+</html>

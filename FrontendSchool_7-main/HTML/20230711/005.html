@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      body {
+        text-align: center;
+      }
+
+      span {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 50%;
+      }
+      header {
+        background-color: steelblue;
+        height: 100px;
+      }
+      section {
+        background-color: rebeccapurple;
+        height: 300px;
+      }
+      aside {
+        background-color: yellowgreen;
+        height: 300px;
+      }
+      footer {
+        background-color: salmon;
+        height: 100px;
+      }
+
+      /* 방법 1 기본너비 값 없을 때 : section에 css 적용 */
+      .a1 section {
+        float: left;
+        width: 80%;
+      }
+
+      /* 방법 2  너비값 있을 때 */
+      .a2 section {
+        float: right;
+        width: 80%;
+      }
+      .a2 aside {
+        float: left;
+        width: 20%;
+      }
+      .a2 footer {
+        clear: left;
+      }
+
+      /* clear fix 사용 */
+      .a3 section {
+        float: left;
+        width: 80%;
+      }
+      .a3 aside {
+        float: right;
+        width: 20%;
+      }
+      .a3 footer {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      header,
+      section,
+      aside,
+      footer {
+        border: 5px solid black;
+      }
+
+      /* 가운데 정렬 */
+      header,
+      section,
+      aside,
+      footer {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      /* section,
+      aside {
+        flex-basis: 0;
+      } */
+
+      .flex section {
+        flex-basis: 0;
+        flex-grow: 3;
+      }
+      .flex aside {
+        flex-basis: 300px;
+        flex-shrink: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- float -->
+    <div class="a1">
+      <header>header</header>
+      <div>
+        <section>section > article<</section>
+        <aside>aside<</aside>
+      </div>
+      <footer>footer<</footer>
+    </div>
+    <br />
+
+    <div class="a2">
+      <header>header</header>
+      <div>
+        <section>section > article<</section>
+        <aside>aside<</aside>
+      </div>
+      <footer>footer<</footer>
+    </div>
+    <br />
+
+    <div class="a3">
+      <header>header</header>
+      <div class="clear-fix">
+        <section>section > article<</section>
+        <aside>aside<</aside>
+      </div>
+      <footer>footer</footer>
+    </div>
+    <br />
+
+    <!-- flex -->
+    <div>
+      <header>header</header>
+      <div class="flex">
+        <section>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+          numquam, sunt dolores nisi eum, dolor, rerum corrupti aliquid hic
+          nesciunt rem minima! Eligendi laborum maxime nemo aliquam fuga itaque
+          nihil?
+        </section>
+        <aside>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sed
+          cum soluta, aliquid aperiam commodi iusto eveniet, fugit nihil
+          eligendi omnis illo magni sit non deleniti dolorum quasi optio
+          distinctio.
+        </aside>
+      </div>
+      <footer>footer</footer>
+    </div>
+  </body>
+</html>

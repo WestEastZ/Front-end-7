@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      let jsonObj = {};
+
+      function xhrRequest() {
+        // 통신을 위한 객체 생성
+        const requestObj = new XMLHttpRequest();
+
+        // 라인이 뚫렸다 알려주는 역할 통신을 하겠따
+        // 데이터 요청
+        requestObj.open("GET", "heros.json");
+
+        // 서버로 보내는 역할
+        requestObj.send();
+
+        // 서버에서 응답 , 통신상태 변경되면 감지 및 수행
+        requestObj.onreadystatechange = () => {
+          if (requestObj.readyState === 4 && requestObj.status === 200) {
+            jsonObj = JSON.parse(requestObj.responseText);
+          }
+        };
+      }
+
+      // async function fetchRequest() {
+      //   const response = await fetch();
+      //   const jsonData = await response.json();
+      // }
+    </script>
+  </body>
+</html>

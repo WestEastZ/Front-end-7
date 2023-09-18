@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "font-gr";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/GoryeongStrawberry.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("./font/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+h1,
+h2 {
+  font-weight: normal;
+}
+
+h1 {
+  color: #8a2be2;
+}
+
+strong {
+  border-bottom: 3px solid currentColor;
+}
+
+h2 {
+  color: royalblue;
+  font-family: "Black Han Sans", sans-serif;
+}
+
+.font-gr {
+  font-family: "font-gr", sans-serif;
+}
+
+.font-down {
+  font-family: "Pretendard-Regular", sans-serif;
+}
+
+.font-improt {
+  font-family: "Roboto Mono", monospace;
+}

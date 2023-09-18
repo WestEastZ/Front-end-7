@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>로그인 또는 회원가입</h1>
+      </header>
+
+      <main class="main">
+        <div class="id-login">
+          <h2 class="title">위니브에서 여러분의 궁금증을 해결하세요! :)</h2>
+          <input class="login-input-id" placeholder="아이디" type="text" />
+          <p class="not-write-id">아이디를 입력해 주세요.</p>
+          <input
+            class="login-input-pw"
+            placeholder="비밀번호"
+            type="password"
+          />
+          <p class="not-write-pw">비밀번호를 입력해주세요.</p>
+
+          <form class="form-check">
+            <input id="check" class="a11y-hidden input-check" type="checkbox"></input>
+            <label class="label-check" for="check">로그인 상태 유지</label>
+          </form>
+
+          <button class="login-btn" type="button">로그인</button>
+        <div class="joinOrLogin">
+            <p>회원가입</p>
+            <p class="joinOrLogin-separate"></p>
+            <p>아이디/비밀번호 찾기</p>
+        </div>
+        </div>
+
+        <div class="separate">
+          <div class="separate-line"></div>
+          <p>또는</p>
+          <div class="separate-line"></div>
+        </div>
+
+        <div class="sns-login">
+          <form class="sns-login-form">
+            <button class="btn-google">구글 계정으로 로그인</button>
+            <button class="btn-facebook">페이스 계정으로 로그인</button>
+            <button class="btn-naver">네이버 계정으로 로그인</button>
+            <button class="btn-kakao">카카오톡 계정으로 로그인</button>
+          </form>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

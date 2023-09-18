@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .box {
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+      }
+
+      .red {
+        background-color: red;
+      }
+      .yellow {
+        background-color: yellow;
+      }
+      .green {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <ul>
+      <li>
+        <button class="btn-red">빨강</button>
+      </li>
+      <li>
+        <button class="btn-yellow">노랑</button>
+      </li>
+      <li>
+        <button class="btn-green">초록</button>
+      </li>
+    </ul>
+
+    <script>
+      const box = document.querySelector(".box");
+      const btnRed = document.querySelector(".btn-red");
+      const btnYellow = document.querySelector(".btn-yellow");
+      const btnGreen = document.querySelector(".btn-green");
+
+      const changeRed = function () {
+        box.style.backgroundColor = "red";
+        // box.classList.add("red");
+        // box.classList.remove("yellow");
+        // box.classList.remove("green");
+      };
+      const changeYello = function () {
+        box.style.backgroundColor = "yellow";
+      };
+      const changeGreen = function () {
+        box.style.backgroundColor = "green";
+      };
+
+      btnRed.addEventListener("click", changeRed);
+      btnYellow.addEventListener("click", changeYello);
+      btnGreen.addEventListener("click", changeGreen);
+
+      // style.backgroundColor로 사용하면 코드 한줄
+
+      // 이승미 코드
+      // btn[i] 인덱스로 접근하여 for문으로 응용
+
+      // let btn = document.getElementsByClassName("btn_change");
+      // let bg = document.getElementById("bg_change");
+
+      // for (let i = 0; i < 3; i++) {
+      //   btn[i].addEventListener("click", function () {
+      //     //클릭된 버튼 아이디 불러오기
+      //     let colorName = this.id;
+      //     // this는 이벤트리스너가 동작되는 btn
+      //     bg.style.backgroundColor = colorName;
+      //   });
+      // }
+
+      // 이지현 코드
+      // node는 forEach 가능 map은 불가
+      // const btn = document.querySelectorAll(".paint-rect");
+      // const canvas = document.querySelector(".canvas");
+      // function makeColorful(e) {
+      //   btn.forEach((x, i) => {
+      //     canvas.classList.remove(`colors-${x.innerText}`);
+      //   });
+      //   const newClass = e.target.innerText;
+      //   canvas.classList.add(`colors-${newClass}`);
+      // }
+      // btn.forEach((x, i) => {
+      //   x.addEventListener("click", makeColorful);
+      // });
+    </script>
+  </body>
+</html>

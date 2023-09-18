@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      class Robot {
+        constructor(name, age) {
+          this.myName = "name";
+          this.myage = age;
+        }
+
+        sayYouName() {
+          console.log(
+            `제 이름은 ${this.myName} ${this.myage} 입니다 삐리비리리비리`
+          );
+        }
+      }
+
+      // extends 선언하고  constructor를 작성하지 않아도     상속되던데
+      // 기본적으로 super() 메서드가 기본 장착?
+      // 생성자 자체가 super() 메서드가 장착?
+
+      class BabyRobot extends Robot {
+        constructor(name, age) {
+          super(name, age); // 얘는 상속
+          this.name = name;
+          this.age = 10; // 애는 베이비 자체 프로퍼티
+        }
+      }
+
+      const babyRobot = new BabyRobot("소을", 20);
+    </script>
+  </body>
+</html>

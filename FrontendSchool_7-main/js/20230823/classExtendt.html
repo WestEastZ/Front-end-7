@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // 모건님의 코드
+      // class Factory {
+      //   constructor(taste1, taste2) {
+      //     this.taste1 = taste1;
+      //     this.taste2 = taste2;
+      //   }
+
+      //   taste() {
+      //     console.log(`${this.taste1}와 ${this.taste2} 맛이 난다!`);
+      //   }
+      // }
+
+      // class FiresSausage extends Factory {
+      //   // fireTaste() 라고 해주면 상관없다.
+      //   taste() {
+      //     // this.taste(); this가 FiresSausage의 taste()를 가리킨다.
+      //     // super.taste(); 부모 Factory 메서드로 쏴준다
+      //     console.log("불맛이 난다!");
+      //   }
+      // }
+
+      // const sausage = new FiresSausage("소고기", "파"); // 변수 할당
+      // sausage.taste(); // 메서드 호출
+
+      // 정현님의 코드
+      class Sausage {
+        constructor(item1, item2) {
+          this.item1 = item1;
+          this.item2 = item2;
+          this.name = `${item1} ${item2} 소세지`;
+        }
+        // 오버라이딩 테크닉.
+        // 부모의 메서드를 자식의 메서드가 덮어써서 새로운 메서드로
+        taste() {
+          console.log(`소세지에서 ${this.item1}와 ${this.item2}의 맛이 난다!`);
+        }
+      }
+
+      const sausage = new Sausage();
+
+      // 소시지 클래스를 상속받는 FiresSausage 파생클래스를 생성해봅니다. 파생클래스의 taste 메서드를 실행하면 콘솔 메세지에 불맛이 나기 시작합니다.
+
+      class FiresSausage extends Sausage {
+        taste(msg) {
+          // 오버로딩 테크닉. 전달인자에 따라 다른 결과를 처리하도록 만들어 줍니다.
+          if (msg) {
+            console.log(
+              `소세지에서 불맛이 어우러진 ${this.item1}와 ${this.item2}의 맛이 난다!! ${msg} 때문인것 같다!`
+            );
+          } else {
+            console.log(
+              `소세지에서 불맛이 어우러진 ${this.item1}와 ${this.item2}의 맛이 난다!!`
+            );
+          }
+        }
+      }
+
+      // 오버라이딩
+      //   taste() {
+      //     console.log(
+      //       `소세지에서 불맛이 어우러진 ${this.item1}와 ${this.item2}의 맛이 난다!!`
+      //     );
+      //   }
+      // }
+
+      // 객체에서 덮어쓰는 것을 "오버라이딩"이라고 한다. // 자식 인스턴스에서 메서드를
+      // 수정해서 하는 것? // 같은 이름의 함수지만 자식에서는 다르게 동작 // 부모
+      // 메서드가 변경되는 것은 아니다 // 부모의 메서드를 자식의 메서드가 덮어써서 새로운
+      // 메서드를 하는 것 // 오버로딩이란? 매개변수 다른것을 다른 메서드로 취급해서
+      // 로딩한다
+
+      const firesSausage = new FiresSausage("파", "계란");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // class MyClass {
+      //   method1() {
+      //     console.log("Method 1");
+      //   }
+
+      //   method2(param1) {
+      //     console.log("Method 2 with 1 parameter: " + param1);
+      //   }
+
+      //   method3(param1, param2) {
+      //     console.log("Method 3 with 2 parameters: " + param1 + ", " + param2);
+      //   }
+      // }
+
+      // const myObj = new MyClass();
+      // myObj.method1(); // "Method 1"
+      // myObj.method2("Hello"); // "Method 2 with 1 parameter: Hello"
+      // myObj.method3("Hello", "World"); // "Method 3 with 2 parameters: Hello, World"
+
+      // 2번
+      class MyClass {
+        method(param) {
+          if (typeof param === "string") {
+            console.log("Method with string parameter: " + param);
+          } else if (typeof param === "number") {
+            console.log("Method with number parameter: " + param);
+          } else {
+            console.log("Method with unknown parameter");
+          }
+        }
+      }
+
+      const myObj = new MyClass();
+      myObj.method("Hello"); // "Method with string parameter: Hello"
+      myObj.method(123); // "Method with number parameter: 123"
+      myObj.method(true); // "Method with unknown parameter"
+    </script>
+  </body>
+</html>

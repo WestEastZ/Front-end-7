@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .container {
+        background-color: yellowgreen;
+        display: flex;
+        text-align: center;
+      }
+
+      .item {
+        box-sizing: border-box;
+        background-color: gold;
+        border: 1px solid black;
+
+        flex-basis: 100px;
+        /* flex-grow: 1; */
+      }
+
+      .item:first-child {
+        flex-shrink: 0;
+      }
+      .item:last-child {
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">heldd</div>
+      <div class="item">abc</div>
+    </div>
+  </body>
+</html>

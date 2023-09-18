@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      @font-face {
+        font-family: "SpoqaHanSansNeo-Regular";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff")
+          format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+      div,
+      section,
+      img,
+      button,
+      p {
+        padding: 0;
+        margin: 0;
+      }
+
+      h1 {
+        font-size: inherit;
+      }
+
+      body {
+        color: #767676;
+        text-align: center;
+        font-family: "SpoqaHanSansNeo-Regular";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+
+      button {
+        border: 0;
+        background: none;
+      }
+
+      .container {
+        width: 520px;
+        box-sizing: border-box;
+
+        padding: 24px;
+
+        border-radius: 10px;
+        border: 1px solid #c4c4c4;
+        background: #fff;
+      }
+
+      .separate {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+
+        margin-bottom: 20px;
+      }
+
+      .separate .line {
+        flex-grow: 1;
+        height: 1px;
+
+        background: #c4c4c4;
+      }
+
+      .separate p {
+        font-size: 14px;
+        font-weight: 400;
+      }
+
+      .login-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .btn-login {
+        width: 100%;
+        height: 50px;
+        box-sizing: border-box;
+
+        display: flex;
+        align-items: center;
+
+        padding: 15px 12px;
+
+        border-radius: 5px;
+        border: 1px solid #767676;
+        background: #fff;
+      }
+
+      .btn-login img {
+        width: 28px;
+        height: 28px;
+      }
+      .btn-login p {
+        margin: 0 auto;
+      }
+
+      .btn-login.facebook {
+        border: 1px solid #2d9cdb;
+      }
+      .btn-login.naver {
+        border: 1px solid #00bf18;
+      }
+      .btn-login.kakao {
+        border: 1px solid #f2c94c;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="container">
+      <header>
+        <h1>로그인 또는 회원가입</h1>
+      </header>
+
+      <div class="separate">
+        <div class="line"></div>
+        <p>또는</p>
+        <div class="line"></div>
+      </div>
+
+      <section class="login-box">
+        <h3>소셜서비스로 로그인</h3>
+        <button class="btn-login">
+          <img src="./images/Google__G__Logo 1.png" alt="" />
+          <p>구글 계정으로 로그인</p>
+        </button>
+        <button class="btn-login facebook">
+          <img src="./images/facebook.png" alt="" />
+          <p>페이스북 계정으로 로그인</p>
+        </button>
+        <button class="btn-login naver">
+          <img src="./images/naver-logo.png" alt="" />
+          <p>네이버 계정으로 로그인</p>
+        </button>
+        <button class="btn-login kakao">
+          <img src="./images/message-circle.png" alt="" />
+          <p>카카오톡 계정으로로그인</p>
+        </button>
+      </section>
+    </article>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      class Animal {
+        speak() {
+          console.log("Animal makes a sound");
+        }
+      }
+
+      class Dog extends Animal {
+        // 얘가 오버라이딩 된거
+        speak() {
+          console.log("Dog barks");
+        }
+      }
+
+      class Cat extends Animal {
+        // 얘가 오버라이딩 된거
+        speak() {
+          console.log("야옹~");
+        }
+      }
+
+      const myAnimal = new Animal();
+      const myDog = new Dog();
+      const myCat = new Cat();
+
+      myAnimal.speak(); // "Animal makes a sound"
+      myDog.speak(); // "Dog barks"
+      myCat.speak(); // "Dog barks"
+    </script>
+  </body>
+</html>

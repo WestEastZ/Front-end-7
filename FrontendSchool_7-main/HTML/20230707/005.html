@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>박스모델</title>
+    <style>
+      .box1 {
+        background-color: skyblue;
+        border: 10px solid royalblue;
+        width: 100%;
+        height: 200px;
+        /* border paddingd을 width에 포함 */
+        box-sizing: border-box;
+        /* 상 우 하 좌 */
+        padding: 20px 10px 30px 40px;
+        margin: 40px;
+      }
+
+      .box2 {
+        background-color: gold;
+        /* %는 부모요소의 상속값을 계산 */
+        height: 50%;
+      }
+
+      .box3 {
+        width: 100px;
+        height: 100px;
+        background-color: seagreen;
+        margin: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box1">
+      box1
+      <div class="box2">box2</div>
+    </div>
+    <div class="box3">box3</div>
+  </body>
+</html>

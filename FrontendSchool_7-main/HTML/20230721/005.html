@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .container {
+        box-shadow: inset 0 0 20px red;
+        width: 500px;
+        margin: 100px auto;
+
+        display: flex;
+      }
+
+      .sidebar {
+        box-shadow: inset 0 0 20px blue;
+        /* flex-basis: auto; */
+        width: 200px;
+        flex-shrink: 0;
+        /* min-width: 0; */
+
+        /* flex-basis을 200px으로 해도 내부 컨텐츠 너비에 따라 넘을 수 있다 (인지) */
+        /* 항상 유효한 너비가 아니다(flex-basis) -> 이유(max-width : width))*/
+
+        /* width를 적용하면 width값에 맞춰진다 */
+
+        /* width,flex-basis 동시 지정 시 flex-basis가 적용 */
+        /* 그래서 flex-basis 우선 시 되며 min-width: auto가 다시 활동  */
+
+        /* min-width 는 자식 컨텐츠의 너비만큼이다(초기값 auto)  */
+        /* 내부 컨텐츠가 늘어가면 min-width 값도 늘어난다 (auto)  */
+
+        /* flex-grow -> 사용 가능한 공간의 크기를 자신의 너비로 채움 */
+        /* flex-grow로만 layout을 잡으면(width값이 직접적으로 지정되어 있지 않으면) */
+        /* 내부 컨텐츠 크기에 따라 계속 늘어날 수 있다 */
+
+        /* layout을 잡는다 = 안정성있게 고정이 되어야한다 */
+        /* flex-basis: auto 인 상황이면 문제가 발생 할 수 있다 */
+        /* 그래서 ->  */
+
+        /* flex-grow가 1인 main의 컨텐츠가 많아진 상황에서  */
+        /* 사이드바의 flex-shrink가 없다면 사이드가 줄어든다 (flex-shrink:0으로 고정) */
+        /* 늘어나는건 못막는다 줄어드는 것만 막는다 */
+        /* 또한 main이 길어진다 그러나 min-width를 주면 내용물만 넘친다  */
+        /* min-width: 0으로 main이 길어지는 것을 해결  */
+
+        /* https://codepen.io/veamcamp/pen/QWaBXXq */
+      }
+
+      .main {
+        background-color: aqua;
+        box-shadow: inset 0 0 20px goldenrod;
+        /* flex-basis: auto; */
+        flex-grow: 1;
+        min-width: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">sis</div>
+      <div class="main">
+        MainMainMainMainMainMainMainMainMainMainMaiMainMainMaiMainMainMaiMainMainMainMain
+      </div>
+    </div>
+  </body>
+</html>

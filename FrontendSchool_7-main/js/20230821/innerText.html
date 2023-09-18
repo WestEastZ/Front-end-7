@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h3>원본 요소:</h3>
+    <p id="source">
+      <style>
+        #source {
+          color: red;
+        }
+      </style>
+      아래에서<br />이 글을<br />어떻게 인식하는지 살펴보세요.
+      <span style="display: none">숨겨진 글</span>
+    </p>
+    <h3>textContent 결과:</h3>
+    <textarea id="textContentOutput" rows="6" cols="30" readonly>...</textarea>
+    <h3>innerText 결과:</h3>
+    <textarea id="innerTextOutput" rows="6" cols="30" readonly>...</textarea> -->
+
+    <figure>
+      <img src="" alt="" />
+      <figcaption>
+        상품가격 : 29000 <span class="hidden">vip는 29900</span>
+      </figcaption>
+    </figure>
+    <script>
+      const cost = document.querySelector("figcaption");
+      console.log(cost.textContent); // 순수하게 텍스트가 필요할 때
+      console.log(cost.innerText);
+
+      cost.innerHTML = `<dialog>
+        <div>
+          <p>${msg}<p>
+        <div/>
+      </dialog>`;
+      // const source = document.getElementById("source");
+      // const textContentOutput = document.getElementById("textContentOutput");
+      // const innerTextOutput = document.getElementById("innerTextOutput");
+
+      // textContentOutput.innerHTML = source.textContent;
+      // innerTextOutput.innerHTML = source.innerText;
+    </script>
+  </body>
+</html>

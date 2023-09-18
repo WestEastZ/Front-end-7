@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <form action="">
+      <button type="submit" class="submit">제출</button>
+    </form>
+
+    <script>
+      const btn = document.querySelector("button");
+
+      btn.addEventListener("click", (event) => {
+        // 기본기능을 막는다
+        event.preventDefault();
+        console.log("submit");
+        // 이벤트 흐름을 차단한다.
+        // event.stopPropagation();
+      });
+
+      // 캡처링 이벤트로 만들면 버블링 이벤트에서 전파를 막아도 소용 없다.
+      document.body.addEventListener(
+        "click",
+        () => {
+          console.log("event still alive");
+        },
+        true
+      );
+
+      // 앞에서 우리는 preventDefault를 통해 브라우저의 기본 이벤트 동작을 취소해봤습니다. 하지만 이때 우리가 앞에서 배웠던 이벤트 흐름, 즉 이벤트 전파(이벤트 프로파게이션)를 막지는 못합니다.
+
+      // 이때 만약 이벤트 전파를 막고 싶다면 event.stopPropagation() 코드를 추가
+
+      // body 이벤트를 캡처링 이벤트로 설정 후 btn 이벤트 event.stopPropagation();
+      // 를 하단에 작성 시 버블링 이벤트만 막아준다.
+      //  console.log("event still alive");
+      // console.log("submit"); 순으로 출력된다.
+    </script>
+  </body>
+</html>

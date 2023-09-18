@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // 생성자 함수는 객체를 생성한다.
+      // 인스턴스란 생성자 함수를 통해 생성된 객체를 말한다.
+      // this는 인스턴스를 가리킨다.
+      // new를 적어주지 않으면 this는 window를 가리킨다.
+
+      let book = {
+        책이름:
+          "알잘딱깔센 JavaScript 비동기 프로그래밍 - 비동기 너 내 동기가 돼라",
+        책가격: 0,
+        저자: ["구나영", "김경림"],
+        출판일: "2022.08.12",
+      };
+      // 책이 100권이라면?
+
+      function Book(책이름, 책가격, 저자, 출판일) {
+        this.책이름 = 책이름;
+        this.책가격 = 책가격;
+        this.저자 = 저자;
+        this.출판일 = 출판일;
+        this.read = function () {
+          console, log("reading...");
+        };
+      }
+
+      const myBook1 = new Book("클로저", 10000, "동주", "20230817");
+      const myBook2 = new Book("호이스팅", 20000, "재현", "20230817");
+
+      // this는 myBook(n)(인스턴스)을 가리킨다.
+      // 즉 myBook을.책이름 ... 등을 가리킨다.
+
+      // 생성자 함수 사용이유
+      // 1. 동일한 프로퍼티를 가지는 객체 생성
+      // 2. prototype을 이용하여 메모리 효율 높임
+    </script>
+  </body>
+</html>

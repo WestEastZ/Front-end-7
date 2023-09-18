@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>position</title>
+    <style>
+      body {
+        height: 1000vh;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: rgba(65, 105, 225, 0.8);
+        color: white;
+      }
+      .relative {
+        position: relative;
+        top: 20px;
+      }
+      .absolute {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .parent {
+        position: relative;
+      }
+      .fixed {
+        position: fixed;
+        top: 200px;
+        left: 200px;
+      }
+      .sticky {
+        position: sticky;
+        top: 10px;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="box fixed">box1</div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores
+      optio magnam maiores fugit veniam minus omnis, suscipit corrupti ipsa.
+      Praesentium ea explicabo dicta obcaecati error ad amet ipsum deleniti!
+    </div>
+    <div class="box sticky">box</div>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      body {
+        background-color: brown;
+      }
+      .playground {
+        border: 10px solid maroon;
+        width: 80%;
+        margin: 0 auto;
+        border-radius: 20px;
+        background-color: skyblue;
+
+        display: flex;
+      }
+      .frog {
+        text-align: center;
+        background-color: mediumaquamarine;
+        color: lime;
+        font-size: 40px;
+        margin: 10px;
+        border: 6px solid green;
+        border-radius: 10px;
+
+        /* flex-basis: auto;
+        flex-shrink: 1; */
+        /* 최소 너비가 자식의너비로 들어가 있다. (컨텐츠의 너비) */
+        /* min-width: auto; 컨텐츠 크기 */
+        /* flex-grow: 1; */
+        /* width 값을 지정해주면 min-width을 쓴 것과 마찬가지 */
+        /* flex-basis과 width 모두 지정하면 basis 값 사용 */
+        /* flex-basis가 없고 width가 있으면 width 값 사용 */
+      }
+
+      /*  */
+
+      .frog.covid {
+        background-color: orangered;
+        margin-left: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="playground">
+      <div class="frog">Frog</div>
+      <div class="frog">Frog</div>
+      <div class="frog">Frog</div>
+    </div>
+  </body>
+</html>

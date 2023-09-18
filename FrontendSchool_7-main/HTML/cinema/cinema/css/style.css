@@ -1,0 +1,273 @@
+/* reset */
+html,
+body {
+  height: 100%;
+}
+body,
+ul,
+li,
+h1,
+h2,
+h3,
+p,
+article {
+  padding: 0;
+  margin: 0;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3 {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  border: 0;
+  background: none;
+}
+button:enabled {
+  cursor: pointer;
+}
+ul,
+li {
+  list-style: none;
+}
+
+/* CSS 적용 */
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* wrapper */
+.wrapper {
+  width: 1060px;
+
+  max-height: max-content;
+
+  margin: 0 auto;
+  margin-top: 181px;
+
+  padding: 0 30px 30px;
+
+  background-color: #f2f2f2;
+  border-radius: 15px;
+  border: 2px solid var(--gray-4, #bdbdbd);
+}
+
+/* header */
+
+.header {
+  padding-top: 41px;
+}
+.header-title {
+  margin-top: 20px;
+  margin-bottom: 37px;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.header-nav {
+  width: 650px;
+  padding: 28px 0;
+  margin: auto;
+
+  border-top: 1px solid #bdbdbd;
+}
+
+.header-nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  color: #828282;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.header-nav ul .nav-on {
+  color: black;
+  font-weight: 900;
+}
+
+/* cinema-container */
+
+.cinema-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+
+  gap: 24px;
+  padding: 30px;
+
+  border: 2px solid #bdbdbd;
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+/* card */
+.cinema-card {
+  width: 220px;
+
+  border-radius: 10px;
+  border: 1px solid #bdbdbd;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.cinema-inner {
+  padding: 19px 20px;
+}
+
+.cinema-inner img {
+  width: 100%;
+
+  aspect-ratio: 180 / 250;
+  object-fit: cover;
+
+  border-radius: 10px;
+  border: 1px solid #bdbdbd;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.cinema-title {
+  margin: 12px 0;
+  font-weight: 900;
+
+  /*  말줄임 처리 */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.cinema-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5px;
+
+  font-size: 13px;
+}
+
+.cinema-info .type {
+  color: #828282;
+  margin-right: 5px;
+}
+
+.cinema-info .star {
+  background: url(../img/icon-star.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0.3em;
+  background-size: 1em;
+  padding-left: 1.2em;
+}
+
+.btn-group {
+  display: flex;
+  border-top: 1px solid #bdbdbd;
+}
+
+.btn-go,
+.btn-view {
+  height: 41px;
+  width: 100%;
+  box-sizing: border-box;
+
+  padding-bottom: 2px;
+
+  background-color: #f2f2f2;
+
+  font-size: 14px;
+}
+
+.btn-go {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 0 0 0 10px;
+  border-right: 1px solid #bdbdbd;
+}
+
+.btn-go:focus-visible {
+  z-index: 1;
+}
+
+.btn-view {
+  border-radius: 0 0 10px 0;
+}
+
+.btn-view::before {
+  content: "";
+
+  width: 1em;
+  height: 1em;
+
+  display: inline-block;
+
+  vertical-align: middle;
+  margin: -2px 2px 0 -0.4em;
+
+  background-image: url(../img/icon-play.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* footer */
+
+.footer {
+  position: fixed;
+  bottom: 0;
+
+  width: 100%;
+
+  margin-top: 135px;
+
+  background-color: #f2f2f2;
+}
+
+.footer div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-link {
+  width: 1189px;
+
+  padding-top: 53px;
+  padding-bottom: 42px;
+
+  margin: 0 auto;
+
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.footer-link h2 {
+  color: #000;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.footer-link ul {
+  display: flex;
+  gap: 22px;
+}
+
+.footer-address {
+  width: 1189px;
+
+  justify-content: space-between;
+
+  margin: 0 auto;
+
+  padding: 36px 0;
+}

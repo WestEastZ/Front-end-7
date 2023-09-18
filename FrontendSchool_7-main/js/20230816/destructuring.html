@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // let food1, food2, food3;
+
+      // const categories = { food1: "과일", food2: "채소", food3: "육류" };
+
+      // food1 = categories.food1;
+      // food2 = categories.food2;
+      // food3 = categories.food3;
+
+      // const {
+      //   food1: f1,
+      //   food2: f2,
+      //   food3: f3,
+      // } = {
+      //   food1: "과일",
+      //   food2: "채소",
+      //   food3: "육류",
+      // };
+
+      // 객체 구조분해할당
+      const { food1, food2, food3 } = {
+        food1: "과일",
+        food2: "채소",
+        food3: "육류",
+      };
+
+      // 배열 구조분해할당
+      const arr = [1, 2, 3];
+
+      const [a, b, c] = arr;
+
+      console.log(a); // 1
+      console.log(b); // 2
+      console.log(c); // 3
+
+      // 함수 구조분해할당
+      function myFunc([a, b]) {
+        console.log(a);
+        console.log(b);
+      }
+
+      const arr = [1, 2];
+
+      myFunc(arr);
+
+      // 예시
+      // function myFunc({ a: ar1, b: ar2 } = { a: 1, b: 2 }) {
+      //   console.log(ar1);
+      //   console.log(ar2);
+      // }
+
+      // const arr = { a: 1, b: 2 };
+      // myFunc(arr);
+    </script>
+  </body>
+</html>

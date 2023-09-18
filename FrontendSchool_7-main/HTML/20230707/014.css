@@ -1,0 +1,35 @@
+body {
+  background-color: skyblue;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-size: inherit;
+  font-weight: normal;
+}
+
+button:enabled {
+  cursor: pointer;
+  color: blue;
+}
+
+a {
+  text-decoration: none;
+  color: red;
+}
+
+div {
+  background-color: bisque;
+}
+
+img {
+  vertical-align: top;
+  width: 500px;
+  height: auto;
+  animation: 6s linear linfinie;
+  transform: rotateX(360deg);
+  background-color: black;
+}

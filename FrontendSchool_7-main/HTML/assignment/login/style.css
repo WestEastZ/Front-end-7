@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "SpoqaHanSansNeo-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+h1,
+p {
+  font-family: "SpoqaHanSansNeo-Regular";
+  margin: 0;
+  font-size: 12px;
+  color: #767676;
+}
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 50px;
+  width: 350px;
+  height: 140px;
+  background-color: #ffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+.container > p {
+  margin-left: 16px;
+  font-weight: 500;
+  color: black;
+}
+
+.btn {
+  width: 318px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px;
+  background-color: #711bff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.weniv {
+  width: 64px;
+  height: 18px;
+}
+.btn p {
+  font-size: 12px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.info {
+  width: 318px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 16px;
+  font-weight: 400;
+}
+
+.idpassword {
+  width: 133px;
+  height: 16px;
+  display: flex;
+}
+
+.join {
+  display: flex;
+}
+
+.logo {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+.info p {
+  cursor: pointer;
+}

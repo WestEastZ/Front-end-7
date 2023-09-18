@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem;
+  background-color: black;
+  color: white;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 2rem;
+}
+
+.icon {
+  margin: 1rem;
+  font-size: 10em;
+  transition: all 0.5s;
+}
+
+.icon:hover {
+  transform: scale(1.5);
+  color: royalblue;
+}
+
+.text {
+  text-transform: uppercase;
+  font-size: 3em;
+  text-decoration: 1px underline;
+  text-shadow: 2px 2px 3px #ddd;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.lorem {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  text-align: center;
+  font-style: italic;
+  text-transform: capitalize;
+}

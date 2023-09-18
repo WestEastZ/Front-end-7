@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      function 함수3(a = 10, b = 20, c = 30) {
+        return a + b + c;
+      }
+
+      console.log(함수3()); // 60
+      console.log(함수3(100)); // 150
+      console.log(함수3(100, 200)); // 330
+      console.log(함수3(100, 200, 300)); // 600
+
+      console.log(함수3((c = 1000))); // 1030이 되어야 하는거 아니에요?
+      // 1050
+
+      console.log(함수3((c = 1000), (a = 2000))); // 3020이 되어야 하는거 아니에요?
+      // 3030
+
+      // 값이 순서대로 들어갔습니다.
+    </script>
+  </body>
+</html>

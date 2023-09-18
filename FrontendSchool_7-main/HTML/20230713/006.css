@@ -1,0 +1,125 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400, 700;
+  font-style: normal;
+}
+
+/* div:nth-child(odd) {
+  background-color: #eeeeee;
+  margin: 10px 0;
+}
+
+button {
+  border: 1px solid #1a202c;
+  background-color: #343f50;
+  box-shadow: inset 1px 1px 0 0 #4a5568;
+  color: #cbd5df;
+  width: 88px;
+  height: 32px;
+  font-size: 12px;
+  font-family: "Pretendard-Regular";
+  font-weight: 700;
+  margin-right: 24px;
+}
+
+.btn1:enabled:hover {
+  text-decoration: underline;
+  color: #fefefe;
+}
+
+.btn1:enabled:active {
+  box-shadow: inset 1px 1px 0 #262f3e;
+}
+
+.btn1:disabled {
+  box-shadow: none;
+  border: 1px solid #343e4e;
+  background-color: #3a4556;
+  color: #4a5568;
+}
+.btn2 {
+  color: #439aff;
+}
+
+.btn2:hover {
+  border: 1px solid #439aff;
+  background-color: #439aff;
+  color: #fefefe;
+  text-decoration: underline;
+  box-shadow: inset 1px 1px 0 #73b4ff;
+}
+
+.btn2:active {
+  box-shadow: inset 1px 1px 0 #3b78be;
+}
+
+.btn3 {
+  color: #eb5757;
+}
+
+.btn3:hover {
+  border: 1px solid #eb5757;
+  background-color: #eb5757;
+  color: #fefefe;
+  text-decoration: underline;
+  box-shadow: inset 1px 1px 0 #fd6f6f;
+}
+
+.btn3:active {
+  box-shadow: inset 1px 1px 0 #d94242;
+} */
+
+.btn {
+  width: 88px;
+  height: 32px;
+  border-radius: 0;
+  border: 1px solid #1a202c;
+  background-color: #343f50;
+  color: #cbd5df;
+  transition: all 1s;
+}
+
+.btn:enabled {
+  box-shadow: inset 1px 1px 0 0 #4a5568;
+}
+
+.btn:disabled {
+  border: 1px solid #343e4e;
+  background-color: #3a4556;
+  color: #4a5568;
+}
+
+.btn:enabled:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.btn:enabled:active {
+  box-shadow: inset 1px 1px 0 0 #262f3e;
+}
+
+.positive {
+  color: #439aff;
+}
+.positive:enabled:hover {
+  background-color: #439aff;
+  border: 1px solid #439aff;
+  box-shadow: inset 1px 1px 0 0 #73b4ff;
+}
+.positive:enabled:active {
+  box-shadow: inset 1px 1px 0 0 #3b78be;
+}
+
+.negative {
+  color: #eb5757;
+}
+.negative:enabled:hover {
+  background-color: #eb5757;
+  border: 1px solid #eb5757;
+  box-shadow: inset 1px 1px 0 0 #fd6f6f;
+}
+.negative:enabled:active {
+  box-shadow: inset 1px 1px 0 0 #d94242;
+}

@@ -1,0 +1,329 @@
+@font-face {
+  font-family: "SpoqaHanSansNeo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff")
+    format("woff");
+  font-weight: 400, 500, 700;
+  font-style: normal;
+}
+
+/* reset */
+body,
+div,
+p,
+h1,
+h2,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  font-size: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+/* body */
+
+body {
+  height: 100vh;
+  display: flex;
+
+  font-family: "SpoqaHanSansNeo";
+}
+
+/* hidden */
+
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+/* wrapper */
+
+.wrapper {
+  width: 520px;
+  min-width: max-content;
+
+  margin: auto;
+
+  border-radius: 10px;
+  border: 1px solid #c4c4c4;
+  background: #fff;
+}
+
+/* header */
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+
+  padding-top: 20px;
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.header h1 {
+  margin: auto;
+
+  color: #000000;
+  font-weight: 500;
+}
+
+.header::after {
+  content: url(./img/close.png);
+  position: absolute;
+
+  width: 16px;
+  height: 16px;
+
+  right: 24px;
+}
+
+/* main */
+
+.id-login {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 26px 24px;
+  padding-bottom: 28px;
+}
+
+.id-login .title {
+  margin-bottom: 24px;
+}
+
+.login-input-id,
+.login-input-pw {
+  width: 100%;
+  box-sizing: border-box;
+
+  margin: 10px 0 10px 0;
+  padding: 15px;
+
+  font-size: 16px;
+
+  border-radius: 5px;
+  border: 2px solid #f4492e;
+  background: #fff;
+}
+
+/* 아이디 색상변경 */
+.login-input-id:focus {
+  outline: none;
+  border: 2px solid #2f80ed;
+}
+
+/* 아이디 글자 사라지기 */
+.login-input-id:focus + .not-write-id {
+  opacity: 0;
+}
+
+.not-write-id,
+.not-write-pw {
+  color: #f4492e;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* 비밀번호 색상변경 */
+.login-input-pw:focus {
+  outline: none;
+  border: none;
+  border: 2px solid #2f80ed;
+}
+
+/* 비밀번호 글자 사라지기 */
+.login-input-pw:focus + .not-write-pw {
+  opacity: 0;
+}
+
+.form-check {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 12px;
+  margin-bottom: 21px;
+}
+
+.label-check {
+  cursor: pointer;
+  margin-left: 30px;
+
+  color: #767676;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* 로그인 상태 유지 동그라미 */
+.label-check::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+
+  left: 0;
+
+  margin-right: 8px;
+  border: 1px solid #767676;
+  border-radius: 50%;
+}
+
+.label-check::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 5px;
+
+  top: 7px;
+  left: 6px;
+
+  transform: rotate(-45deg);
+
+  border-width: 0 0 2px 2px;
+  border-style: solid;
+  border-color: #767676;
+}
+
+/* 로그인 상태 유지 on/off */
+.input-check:focus + .label-check::before {
+  border-color: #2f80ed;
+  background-color: #2f80ed;
+}
+.input-check:focus + .label-check::after {
+  border-color: white;
+}
+
+.login-btn {
+  width: 100%;
+
+  padding: 14px 0;
+
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+
+  border-radius: 5px;
+  background: #2f80ed;
+}
+
+.login-btn:enabled {
+  cursor: pointer;
+}
+
+.joinOrLogin {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 20px;
+}
+
+.joinOrLogin p {
+  cursor: pointer;
+  color: #767676;
+}
+.joinOrLogin-separate {
+  width: 1px;
+  height: 18px;
+
+  background-color: #767676;
+}
+
+/* separate */
+
+.separate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+
+  padding: 0 24px 0 24px;
+}
+
+.separate p {
+  font-size: 14px;
+  font-weight: 400;
+
+  color: #767676;
+}
+
+.separate-line {
+  height: 1px;
+  flex-grow: 1;
+
+  background-color: #c4c4c4;
+}
+
+/* sns login */
+
+.sns-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  padding: 20px 24px 25px 24px;
+}
+
+.sns-login-form button {
+  width: 100%;
+  height: 50px;
+
+  font-size: 16px;
+  font-weight: 500;
+  color: #767676;
+
+  border-radius: 5px;
+  border: 1px solid #767676;
+}
+
+.sns-login-form button:enabled {
+  cursor: pointer;
+}
+
+.sns-login .sns-login-form .btn-google {
+  background-image: url(./img/Google__G__Logo\ 1.png);
+  background-position: 12px 11px;
+  background-repeat: no-repeat;
+  border: 1px solid #2d9cdb;
+}
+.sns-login .sns-login-form .btn-facebook {
+  background-image: url(./img/facebook.png);
+  background-position: 12px 11px;
+  background-repeat: no-repeat;
+  border: 1px solid #2d9cdb;
+}
+
+.sns-login .sns-login-form .btn-naver {
+  background-image: url(./img/naver-logo.png);
+  background-position: 12px 11px;
+  background-repeat: no-repeat;
+  border: 1px solid #00bf18;
+}
+.sns-login .sns-login-form .btn-kakao {
+  background-image: url(./img/message-circle.png);
+  background-position: 12px 11px;
+  background-repeat: no-repeat;
+  border: 1px solid #f2c94c;
+}

@@ -1,0 +1,132 @@
+/* tabs-Bar */
+
+.headerTab {
+  width: 100%;
+  position: sticky;
+}
+
+.headerTab .header-tabsBar {
+  display: flex;
+  /* align-items: center; */
+
+  position: relative;
+
+  height: 42px;
+  background-color: #dfe1e5;
+}
+
+.header-tabsBar-light {
+  width: 52px;
+
+  display: flex;
+  justify-content: space-between;
+
+  flex-shrink: 0;
+
+  padding: 16px 5px 14px 13px;
+
+  margin-right: 10px;
+}
+
+.light {
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.light.red {
+  border: 1px solid #ce5347;
+  background-color: #ed6a5e;
+}
+.light.yellow {
+  border: 1px solid #d6a243;
+  background-color: #f6be4f;
+}
+.light.green {
+  border: 1px solid #58a942;
+  background-color: #62c554;
+}
+
+.header-tabsBar-tab {
+  width: 100%;
+  position: relative;
+}
+
+.header-tabsBar-tab .tab {
+  display: block;
+  position: relative;
+  top: 8px;
+}
+
+.header-tabsBar-tab-box {
+  width: 220px;
+  display: flex;
+  gap: 7px;
+
+  position: absolute;
+  top: 15px;
+  left: 20px;
+
+  align-items: center;
+}
+
+.header-tabsBar-tab .text {
+  color: #3d4043;
+  font-family: SF Pro Text;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.header-tabsBar-tab .close {
+  width: 8px;
+  height: 8px;
+
+  margin-left: auto;
+}
+
+/* tool-bar */
+.headerTab .header-toolBar {
+  height: 37px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding-left: 15px;
+  padding-right: 15px;
+
+  background-color: #fff;
+}
+
+.headerTab .header-separator {
+  height: 0.5px;
+
+  background: #b6b6b6;
+}
+
+.header-toolBar-action {
+  width: 75px;
+  height: 13px;
+}
+
+.header-toolBar-url {
+  height: 28px;
+
+  display: flex;
+  flex-grow: 1;
+  min-width: fit-content;
+  align-items: center;
+
+  border-radius: 14px;
+  background: #f1f3f4;
+}
+
+.header-toolBar-url img {
+  margin-left: 14px;
+}
+
+.header-toolBar-url-textBox {
+  margin-left: 12px;
+}

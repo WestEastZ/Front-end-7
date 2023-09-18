@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      class Robot {
+        constructor(name, pw) {
+          this.name = name;
+          this.password = pw;
+          // 주의
+          // this.password = pw; 는 set 메서드가 실행된다.
+          // 많은 set 메서드 실행으로 오류를 일으킨다.
+          // 1번 비공개 프로퍼티를 사용하여 해결할 수 있다.
+
+          // this.password / set password
+          // password 이름이 다르게 해서 해결한다.
+
+          // 1번 this._password / set password
+          // 2번 this.password / this._password
+        }
+
+        sayYourname() {
+          console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+        }
+
+        get password() {
+          return this.password;
+        }
+        set password(pw) {
+          this.password = pw;
+        }
+      }
+
+      const robot = new Robot("lion", 1234);
+    </script>
+  </body>
+</html>

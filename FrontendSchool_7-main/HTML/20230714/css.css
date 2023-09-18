@@ -1,0 +1,90 @@
+h1,
+h2,
+p,
+ul {
+  margin: unset;
+  padding: unset;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2 {
+  font-size: unset;
+  font-weight: unset;
+}
+
+body {
+  background-image: url(./profile/images/background.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  background-color: #ddd;
+  width: 800px;
+  margin: 100px auto;
+}
+
+.header {
+  background-image: url(./profile/images/cover02.png);
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  color: white;
+}
+
+.header img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* 내부 컨텐츠를 가운데로 정렬 */
+.header h1 {
+  text-align: center;
+  font-size: 100px;
+}
+
+/*  블럭크기를 지정하고 좌우 여백을 만들어 margin으로 가운데 정렬 */
+.header p {
+  border-top: 4px solid white;
+
+  /* fit content는 width: auto 개념을 가지고 있다 */
+  width: fit-content;
+  padding: 10px 20px;
+  margin: 0 auto;
+}
+
+.section {
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+  background-image: url(./profile/images/icon-information.png);
+  background-repeat: no-repeat;
+  background-position: right 30px center;
+}
+
+.skill {
+  background-image: url(./profile/images/icon-skills.png);
+}
+
+.section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: salmon;
+}
+
+.list li {
+  border-left: 3px solid #ddd;
+  padding-left: 15px;
+}
+
+.footer {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}

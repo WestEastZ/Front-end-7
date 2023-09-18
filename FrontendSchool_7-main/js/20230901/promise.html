@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      const orderCoffee = new Promise((resolve, rejcet) => {
+        const requsetObj = new XMLHttpRequest();
+
+        requsetObj.open("GET", "orderCoffee.txt");
+
+        requsetObj.onreadystatechange = () => {
+          if (requsetObj.readyState === 4) {
+            if (requsetObj.status === 200) {
+              const result = requsetObj.responseText;
+              resolve(result);
+            } else {
+              rejcet(
+                new Error(`오늘의 커피가 원두가 없습니다. ${requsetObj.status}`)
+              );
+            }
+          }
+        };
+
+        requsetObj.send();
+      });
+
+      // promise 객체는 then, catch라는 메서드를 갖는다.
+      // then은 resolve가 실행되어야 실행된다. 즉, 통신이 성공해야한다.
+      // resolve 함수의 인자가 then의 매개변수로 전달된다.
+      // reject 함수의 인자가 catch의 매개변수로 전달된다.
+
+      orderCoffee
+        .then((asyncResult) => {
+          console.log(asyncResult);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      body {
+        background-color: royalblue;
+      }
+      .modal {
+        width: 200px;
+        height: 100px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        text-align: center;
+        background-color: #fff;
+
+        /* 0 0 좌표를 기준으로 위치가 지정된다 (좌상단 모서리)
+        점으로 생각하면 쉽다 (면적이 있기 때문에 점으로 생각) */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        /* top: calc(50% - (100px/2));
+        left: calc(50% - (200px/2)); */
+
+        /* 정확한 위치를 위해 -50%씩 이동 */
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate eius
+      deserunt quod tenetur quo magnam sequi ducimus blanditiis! Quos facilis id
+      consequuntur. Dicta, inventore consectetur nemo eligendi perferendis
+      voluptas voluptate.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate eius
+      deserunt quod tenetur quo magnam sequi ducimus blanditiis! Quos facilis id
+      consequuntur. Dicta, inventore consectetur nemo eligendi perferendis
+      voluptas voluptate.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate eius
+      deserunt quod tenetur quo magnam sequi ducimus blanditiis! Quos facilis id
+      consequuntur. Dicta, inventore consectetur nemo eligendi perferendis
+      voluptas voluptate.
+    </p>
+    <div class="modal">
+      <p>삭제하시겠습니까</p>
+      <button type="button">취소</button>
+      <button type="button">삭제</button>
+    </div>
+  </body>
+</html>

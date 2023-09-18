@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // 주소를 참조 (메모리 사용)
+      let me = { age: 30 };
+
+      let you = me;
+      // 이제 {age : 30}의 참조카운트는 2
+
+      me = null;
+      // 이제 참조 카운트는 1 (you가 유일한 참조자가 됌)
+
+      you = null;
+      // 이제 참조 카운트는 0
+      // 이제서야 가비치 컬렌션의 대상이 된다.
+
+      let x = {
+        y: {
+          z: 1,
+        },
+      };
+      // x가 참조하는 객체를 obj1
+      // y가 참조하는 객체를 obj2
+
+      let a = x; // obj1 -> 2 (x, a)
+      x = 1; // obj1 -> 1 (a)
+
+      let b = a.y; // obj2 -> 2 (a.y, b)
+      a = 2; //obj1 -> 0, obj2 -> 1 (b)
+      // obj1 이 메모리 누수의 대상이다.
+
+      function outer() {
+        let privateVal = ["test"];
+
+        function getPrivate() {
+          return privateVal;
+        }
+
+        return getPrivate;
+      }
+
+      const getPrivate = outer();
+      let secretVal = getPrivate();
+
+      secretVal = undefined;
+      // 사용을 마친 secretVal 은 나중에 null / undefinded 를
+      // 할당하여 클로저 연결을 끊어주어야 한다.
+    </script>
+  </body>
+</html>
