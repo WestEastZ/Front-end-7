@@ -33,7 +33,7 @@
         while (array1Item || array2Item) {
           // [1,2,2,3,3]
           // array1Item의 원소가 array2Item의 원소보다 작다면 먼저 push 한다.
-          if (array1Item < array2Item) {
+          if (array2Item === undefined || array1Item < array2Item) {
             mergedArray.push(array1Item);
             array1Item = array1[i];
             i++;
